@@ -1,0 +1,35 @@
+In the hello.js where the 
+const http = require('http');
+
+the http module contain the function to create the server.
+
+const http = 'localhost';
+const port = 8000;
+
+the web servers accept requests from browser and other clients. The webserver by entering a domain name converted into an IP address by a DNS server. An Ip address is a unique number that identify a machine on a network like the internet. 
+
+The value localhost is a special private address the conputers use for local server. It's equivalent to 127.0.0.1.
+
+The port is the no. use an endpoint to our IP address and 8000 for our web servers. It's default and in most case deverlopers use it for HTTP servers.
+
+const requestListener = function(req,res){
+	res.writeHead(200);
+	res.end('server started');
+
+}
+
+this function handle an incoming HTTP request and return an HTTP response. 
+The first line res.writehead(200) sets the HTTP status code to ok.
+
+For the JSON Part
+
+res.setHeader("content-type", "application/json");
+Here we want to return a JSON response and by changing it the HTTP header are attached to a request or a response. 
+
+The headers name and its value. 
+
+res.writehead(200);
+res.send('{message": "This is a json response"}');
+
+this res.send file will succesfully return the string arguments contains valid json.
+
